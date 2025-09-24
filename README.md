@@ -1,0 +1,1 @@
+# spotseeker-manager-frontend
