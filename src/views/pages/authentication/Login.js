@@ -94,9 +94,8 @@ const Login = () => {
           useJwt.login({ email: data.loginEmail, password: data.password })
           .then(res => {
             const data = { ...res.data }
-            dispatch(handleLogin(data))
             if (data.data.role && data.data.role === "Manager") {
-              // dispatch(handleLogin(data))
+              dispatch(handleLogin(data))
               ability.update([
                 {
                   action: 'manage',
