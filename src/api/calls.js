@@ -16,6 +16,12 @@ const TMApi = axios.create({
   )}`;
   return config;
 });*/
+TMApi.interceptors.request.use(function (config) {
+  config.headers.Authorization = `Bearer ${localStorage.getItem(
+    "accessToken"
+  )}`
+  return config
+})
 
 // ** Add request/response interceptor
 TMApi.interceptors.response.use(
@@ -26,11 +32,11 @@ TMApi.interceptors.response.use(
 
     // ** if (status === 401) {
     if (response && response.status === 401) {
-      localStorage.removeItem("userData")
-      window.location.reload()
+      // localStorage.removeItem("userData")
+      // window.location.reload()
     } else if (response && response.status === 403) {
-      localStorage.removeItem("userData")
-      window.location.reload()
+      // localStorage.removeItem("userData")
+      // window.location.reload()
     }
     return Promise.reject(error)
   }
