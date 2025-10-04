@@ -295,6 +295,18 @@ export const eventTypeOpts = [
   },
   {
     value: "theatre",
-    label: "Theatre"
-  }
+    label: "Theatre",
+  },
+  {
+    value: "tamil_dj",
+    label: "tamil dj"
+  },
+  {
+    value: "club",
+    label: "club"
+  },
+  {
+    value: "halloween",
+    label: "halloween"
+  },
 ]
