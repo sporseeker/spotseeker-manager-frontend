@@ -295,7 +295,7 @@ export const eventTypeOpts = [
   },
   {
     value: "theatre",
-    label: "Theatre",
+    label: "Theatre"
   },
   {
     value: "tamil_dj",
@@ -308,5 +308,5 @@ export const eventTypeOpts = [
   {
     value: "halloween",
     label: "halloween"
-  },
+  }
 ]
